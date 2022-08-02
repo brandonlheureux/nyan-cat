@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+  background: aquamarine;
+}
+
+.board {
+  cursor: url("./images/crosshair.png"), auto;
+  /* background-color: aquamarine; */
+  /* position: absolute; */
+  /* background-image: url("./images/space.jpeg");
+  background-size: cover; */
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+}
+
+
+video {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  /* background-color: transparent; */
+  background-color: rgba(0, 255, 0, 0.05);
+  border: green solid 3px;
+  border-radius: 5px;
+  pointer-events: none; 
+}
+
+#menu.active {
+  background-color: rgba(0, 255, 0, 0.3);
+  pointer-events: auto; 
+}
